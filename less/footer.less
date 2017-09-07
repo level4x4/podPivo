@@ -1,0 +1,40 @@
+footer {
+	color: @about-us-titles-color;
+	font-size: 30px;
+	border-top: 1px solid #ffffff;
+	padding-top: 40px;
+	padding-bottom: 110px;
+	position: relative;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 32px;
+		background: repeating-linear-gradient(-45deg, transparent 0px, transparent 6px, #ffffff 1px, #ffffff 7px);
+	}
+
+	& a {
+		text-decoration: underline;
+		color: #ffffff;
+		&:active,
+		&:focus,
+		&:hover {
+			color: #ffffff;
+		}
+	}
+
+	& .pp-socials {
+		& a {
+			color: #a7a7a7;
+			&:active,
+			&:focus,
+			&:hover {
+				color: #ffffff;
+			}
+		}
+	}
+}

@@ -1,0 +1,295 @@
+header {
+	background-color: @header-background-color;
+}
+
+.pp-first-nav {
+	height: 34px;
+	color: @first-nav-color;
+	line-height: 29px;
+	font-size: 16px;
+	border-bottom: 1px solid @first-nav-border-color;
+	& nav {
+		line-height: 34px;
+
+		& a {
+			color: @link-first-nav-color;
+			text-transform: uppercase;
+			margin: 0 20px;
+
+			&:hover,
+			&:focus,
+			&.active,
+			&:active {
+				color: @link-first-nav-color-hover;
+			}
+		}
+	}
+
+	& .col {
+		padding: 0;
+	}
+
+	& .phone {
+		padding-left: 20px;
+		line-height: 34px;
+	}
+}
+
+.pp-logo {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	border-bottom: 1px solid @logo-border-color;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 10px;
+		background: repeating-linear-gradient(-45deg, #000000 0px, #000000 6px, #ffffff 1px, #ffffff 7px);
+	}
+
+	& svg {
+		margin: auto;
+		width: 140px;
+		height: 71px;
+	}
+}
+
+.sm-toggle-menu {
+	height: 63px;
+	background-color: @second-nav-background-color;
+	border-bottom: 1px solid @second-nav-border-color;
+}
+
+.pp-second-nav {
+	height: 63px;
+	background-color: @second-nav-background-color;
+	border-bottom: 1px solid @second-nav-border-color;
+
+	& .container {
+		background-color: @second-nav-background-color;
+	}
+
+	& nav {
+		height: 62px;
+		background-color: @second-nav-background-color;
+		overflow-y: auto;
+		white-space: nowrap;
+		position: relative;
+		z-index: 11;
+
+		& a {
+			display: inline-block;
+			position: relative;
+			line-height: 62px;
+			font-size: 25px;
+			color: @link-second-nav-color;
+			text-decoration: none;
+			padding: 0 18px;
+			transition: height linear 500ms, color ease 500ms;
+
+			& p {
+				display: none;
+				position: relative;
+				z-index: 3;
+				margin: 0;
+			}
+
+			& img,
+			& svg {
+				position: relative;
+				z-index: 3;
+			}
+
+			& span {
+				display: none;
+				position: absolute;
+				font-size: 12px;
+				font-family: Arial;
+				bottom: 25px;
+				left: 0;
+				right: 0;
+				line-height: normal;
+				white-space: nowrap;
+				transition: opacity ease 500ms, bottom ease 500ms, color ease 500ms;
+				opacity: 0;
+			}
+
+			&:hover {
+				color: @link-second-nav-color-hover;
+
+				& span {
+					opacity: 1;
+					bottom: 10px;
+				}
+			}
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-left: 1px solid @link-active-second-nav-border-color;
+				border-right: 1px solid @link-active-second-nav-border-color;
+				background-color: @link-active-second-nav-background-color;
+				height: 0;
+				transition: height linear 500ms, color ease 500ms;
+			}
+
+			&.active {
+				&:before {
+					height: 62px;
+				}
+				color: @link-active-second-nav-color;
+
+				& span {
+					bottom: 10px;
+					opacity: 1;
+					color: @link-active-span-second-nav-color;
+				}
+			}
+		}
+	}
+
+	& .pp-basket {
+		padding-top: 21px;
+		transition: bottom ease 500ms;
+		height: 65px;
+		bottom: 12px;
+		box-shadow: 0 5px 18px rgba(0, 0, 0, 0.32);
+	}
+}
+
+.pp-second-nav {
+	& .position-fixed {
+		& .pp-basket {
+			bottom: -55px;
+
+			&:hover,
+			&:focus {
+				bottom: -65px
+			}
+		}
+	}
+}
+
+.pp-logo-small {
+	padding-top: 2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+//@keyframes filter-up {
+//	from {
+//		bottom: 0;
+//		top: 109px;
+//	}
+//	to {
+//		bottom: 0;
+//		top: 0;
+//	}
+//}
+//
+//@keyframes filter-down {
+//	from {
+//		bottom: 0;
+//		top: 0;
+//	}
+//	to {
+//		bottom: 0;
+//		top: -109px;
+//	}
+//}
+
+@media (min-width: 768px) {
+	.pp-logo {
+		height: 102px;
+
+		& svg {
+			margin: auto;
+			width: 140px;
+			height: 71px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.sm-toggle-menu {
+		height: 79px;
+	}
+
+	.pp-logo {
+		height: 125px;
+	}
+
+	.pp-second-nav {
+		height: 79px;
+		& nav {
+			height: 78px;
+			& a {
+				line-height: 78px;
+
+				& p {
+					display: block;
+				}
+
+				& img,
+				& svg {
+					display: none;
+				}
+
+				&.active {
+					&:before {
+						height: 78px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.sm-toggle-menu {
+		height: 110px;
+	}
+
+	.pp-logo {
+		height: 210px;
+
+		& svg {
+			width: 217px;
+			height: 111px;
+		}
+	}
+
+	.pp-second-nav {
+		height: 110px;
+		& nav {
+			height: 109px;
+			& a {
+				line-height: 109px;
+
+				& span {
+					display: block;
+				}
+
+				&.active {
+					&:before {
+						height: 109px;
+					}
+				}
+			}
+		}
+	}
+}

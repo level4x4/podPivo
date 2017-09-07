@@ -1,0 +1,382 @@
+@product-menu-container-background-color: #000000;
+@product-top-menu-container-background-color: rgba(0, 0, 0, 0.7);
+
+@animation-menu-item-background-color: rgba(255, 255, 255, 0.2);
+@animation-menu-item-background-color-active: rgba(255, 255, 255, 0.8);
+@animation-menu-item-color-active: #000000;
+
+.pp-product-menu {
+	display: none;
+}
+
+.pp-product-menu-mixin() {
+	& .pp-product-menu__container {
+		height: 120px;
+		max-width: 280px;
+		transition: height 500ms ease 500ms, max-width linear 200ms;
+
+		& .pp-product-menu__container-background {
+			height: 100px;
+
+			&:before {
+				right: 50%;
+				border-right: 700px solid transparent;
+			}
+			&:after {
+				left: 50%;
+				border-left: 700px solid transparent;
+			}
+		}
+
+		& .pp-product-menu__icons {
+			display: block;
+			position: absolute;
+			z-index: 2;
+			top: 62px;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			transition: opacity 1100ms ease 100ms;
+
+			& a {
+				font-family: Arial;
+				font-size: 14px;
+				color: @product-color;
+				text-decoration: none;
+			}
+
+			& .pp-animation-left,
+			& .pp-animation-right {
+				display: block;
+				left: 0;
+				right: 0;
+			}
+
+			& .pp-animation-left {
+				left: -200%;
+
+				& svg {
+					margin-top: 30px;
+				}
+			}
+			& .pp-animation-right {
+				top: 206px;
+				right: -200%;
+
+				& svg {
+					margin-top: 30px;
+				}
+			}
+		}
+
+		&.active,
+		&:hover {
+			.pp-product-menu-active-mixin;
+		}
+
+	}
+}
+
+.pp-product-menu-active-mixin() {
+	cursor: default;
+	height: 100%;
+	max-width: 100%;
+
+	& .pp-product-menu__container-background {
+		height: calc(~"100% - 1px");
+	}
+
+	& .pp-product-menu__small-icons {
+		bottom: -90px;
+	}
+
+	& .pp-product-menu__icons {
+		opacity: 1;
+
+		& .pp-animation-left {
+			left: 0;
+		}
+		& .pp-animation-right {
+			right: 0;
+		}
+	}
+
+}
+
+.pp-product-menu {
+	display: block;
+	position: relative;
+
+	& .pp-product-menu__container {
+		max-width: 68px;
+		position: absolute;
+		transition: height 500ms ease 500ms, max-width linear 200ms;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 170px;
+		display: block;
+		cursor: pointer;
+		overflow: hidden;
+
+		& .pp-product-menu__icons {
+			display: none;
+		}
+
+		& .pp-product-menu__small-icons {
+			position: absolute;
+			z-index: 2;
+			left: 0;
+			right: 0;
+			bottom: 22px;
+			margin: auto;
+
+			transition: bottom 500ms ease 500ms;
+
+			& span {
+				display: inline-block;
+				margin: 0 4%;
+			}
+		}
+
+		& .pp-product-menu__container-background {
+			position: absolute;
+			z-index: 1;
+			bottom: 1px;
+			left: 0;
+			right: 0;
+			opacity: 0.7;
+			background-color: @product-menu-container-background-color;
+			transition: height 500ms ease 500ms;
+			height: 145px;
+
+			&:before,
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: -90px;
+				width: 0;
+				height: 0;
+				border-bottom: 90px solid @product-menu-container-background-color;
+			}
+
+			&:before {
+				right: 50%;
+				border-right: 200px solid transparent;
+			}
+			&:after {
+				left: 50%;
+				border-left: 200px solid transparent;
+			}
+		}
+	}
+}
+
+@-webkit-keyframes swing {
+	15% {
+		bottom: 50px;
+		opacity: 0.85;
+	}
+	30% {
+		bottom: 45px;
+		opacity: 0.7;
+	}
+	40% {
+		bottom: 40px;
+		opacity: 0.6;
+	}
+	50% {
+		bottom: -10px;
+		opacity: 0.5;
+	}
+	65% {
+		bottom: -40px;
+		opacity: 0.45;
+	}
+	100% {
+		bottom: -90px;
+		opacity: 0;
+	}
+}
+
+@keyframes swing {
+	15% {
+		bottom: 50px;
+		opacity: 0.85;
+	}
+	30% {
+		bottom: 45px;
+		opacity: 0.7;
+	}
+	40% {
+		bottom: 40px;
+		opacity: 0.6;
+	}
+	50% {
+		bottom: -10px;
+		opacity: 0.5;
+	}
+	65% {
+		bottom: -40px;
+		opacity: 0.45;
+	}
+	100% {
+		bottom: -90px;
+		opacity: 0;
+	}
+}
+
+.pp-animation-menu-item {
+	position: absolute;
+	height: 206px;
+	transition: left 1500ms ease 500ms, right 1500ms ease 500ms, background ease 500ms;
+
+	&:hover {
+		background: @animation-menu-item-background-color;
+	}
+
+	& p {
+		transition: color ease 500ms;
+	}
+	& svg {
+		& .description-big0,
+		& .camera-big0,
+		& .description-big1,
+		& .camera-big1 {
+			transition: stroke ease 500ms, fill ease 500ms;
+		}
+	}
+
+	&.active {
+		background: @animation-menu-item-background-color-active;
+
+		& p {
+			color: @animation-menu-item-color-active;
+		}
+		& svg {
+			& .description-big0,
+			& .camera-big0 {
+				stroke: @animation-menu-item-color-active !important;
+			}
+			& .description-big1,
+			& .camera-big1 {
+				fill: @animation-menu-item-color-active !important;
+			}
+		}
+	}
+}
+
+.pp-top-menu {
+	margin-top: -84px;
+	position: relative;
+	width: 100%;
+	height: 84px;
+	background-color: @product-top-menu-container-background-color;
+	transition: margin-top ease 500ms;
+
+	&.active {
+		margin-top: 0;
+	}
+
+	& .pp-menu-item {
+		transition: background ease 500ms;
+		text-align: center;
+		font-family: Arial;
+		font-size: 14px;
+		color: @product-color;
+		display: inline-block;
+		width: 98px;
+		height: 84px;
+		padding-top: 14px;
+		line-height: 1;
+
+		& p {
+			transition: color ease 500ms;
+		}
+
+		& svg {
+			& .description-big0,
+			& .camera-big0,
+			& .description-big1,
+			& .camera-big1 {
+				transition: stroke ease 500ms, fill ease 500ms;
+			}
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			background: @animation-menu-item-background-color;
+			text-decoration: none;
+		}
+
+		&.active {
+			background: @animation-menu-item-background-color-active;
+
+			& p {
+				color: @animation-menu-item-color-active;
+			}
+			& svg {
+				& .description-big0,
+				& .camera-big0 {
+					stroke: @animation-menu-item-color-active !important;
+				}
+				& .description-big1,
+				& .camera-big1 {
+					fill: @animation-menu-item-color-active !important;
+				}
+			}
+		}
+	}
+
+}
+
+.pp-top-menu-mixin() {
+	&.active {
+		margin-top: -85px;
+	}
+}
+
+.pp-product {
+	&.active {
+		& .pp-product-menu__container {
+			bottom: -100px;
+		}
+
+		& .pp-product-menu {
+			width: 0;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+	.pp-product {
+		&.active {
+			& .pp-product-menu__container {
+				bottom: 0;
+				.pp-product-menu-active-mixin;
+			}
+
+			& .pp-product-menu {
+				width: 25%;
+			}
+		}
+	}
+
+	.pp-top-menu {
+		.pp-top-menu-mixin;
+	}
+
+	.pp-product-menu {
+		.pp-product-menu-mixin;
+	}
+}
+
+@media (min-width: 1200px) {
+
+}

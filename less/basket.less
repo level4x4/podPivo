@@ -1,0 +1,111 @@
+.white-section {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.pp-basket-container {
+	& h1 {
+		font-size: 50px;
+	}
+
+	& hr {
+		border-color: #000000;
+	}
+
+	& .btn {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+}
+
+.pp-basket-item {
+	position: relative;
+
+	& h2 {
+		font-size: 22px;
+	}
+
+	& .pp-basket-item-amount-container {
+		font-size: 22px;
+		line-height: 1;
+		&:before {
+
+		}
+	}
+
+	& a {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		height: 22px;
+		width: 22px;
+		&:before,
+		&:after {
+			background-color: #d0d0d0;
+		}
+	}
+
+	& .pp-basket-item-amount-add,
+	& .pp-basket-item-amount-remove {
+		&:before {
+			content: "";
+			height: 1px;
+			width: 100%;
+			position: absolute;
+			margin: auto;
+			top: 6px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	& .pp-basket-item-amount-add {
+		&:after {
+			content: "";
+			height: 100%;
+			width: 1px;
+			position: absolute;
+			margin: auto;
+			top: 6px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	& .pp-basket-item-amount-add,
+	& .pp-basket-item-amount-remove {
+		&.active {
+			&:before,
+			&:after {
+				background-color: #000000;
+			}
+		}
+	}
+
+	& .pp-basket-item-amount {
+		display: inline-block;
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+
+	& hr {
+		width: 100px;
+		border-color: #d0d0d0;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	& .pp-basket-item-price {
+		font-size: 30px;
+
+		& small {
+			font-size: 22px;
+		}
+	}
+
+	& .pp-basket-item-delete {
+		position: absolute;
+	}
+}

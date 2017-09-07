@@ -1,0 +1,59 @@
+.hide() {
+	display: none;
+}
+
+.show() {
+	display: block;
+}
+
+.position-relative {
+	position: relative;
+}
+
+.position-absolute {
+	position: absolute;
+}
+
+.xs-hide,
+.sm-hide,
+.md-hide,
+.lg-hide {
+	.hide()
+}
+
+
+
+.xs-show,
+.sm-show,
+.md-show,
+.lg-show {
+	.show()
+}
+
+@media (min-width: 768px) {
+	.xs-hide {
+		.show()
+	}
+
+	.xs-show {
+		.hide()
+	}
+}
+@media (min-width: 992px) {
+	.sm-hide {
+		.show()
+	}
+
+	.sm-show {
+		.hide()
+	}
+}
+@media (min-width: 1200px) {
+	.md-hide {
+		.show()
+	}
+
+	.md-show {
+		.hide()
+	}
+}

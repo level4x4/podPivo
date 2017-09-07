@@ -1,0 +1,318 @@
+html {
+	background-color: @body-background-color;
+}
+
+body {
+	background-color: transparent;
+}
+
+html, body {
+	font-family: "Minion-Pro";
+	font-size: 16px;
+	height: 100%;
+	color: @body-color;
+}
+
+a {
+	transition: color linear 500ms;
+}
+
+main {
+}
+
+h2 {
+	font-size: 60px;
+}
+
+.fa {
+	margin: 0 20px;
+}
+
+.pp-marker,
+.pp-basket {
+	margin: 0 15px 0 0;
+	position: absolute;
+	right: 0;
+	height: 55px;
+	width: 68px;
+	background-color: @basket-background-color;
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -12px;
+		width: 0;
+		height: 0;
+		border-top: 12px solid @basket-background-color;
+	}
+
+	&:before {
+		left: 0;
+		border-right: 34px solid transparent;
+	}
+	&:after {
+		right: 0;
+		border-left: 34px solid transparent;
+	}
+}
+
+.pp-basket {
+	padding: 11px 0 0 8px;
+	position: absolute;
+	z-index: 10;
+	right: 0;
+}
+
+.btn {
+	font-size: 25px;
+	text-decoration: none;
+
+	&.btn-lg {
+		font-size: 40px;
+		line-height: 63px;
+		height: 77px;
+	}
+
+	&.btn-default {
+		transition: all linear 500ms;
+		border: none;
+		color: @btn-default-color;
+		background-color: @btn-default-background-color;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: @btn-default-color-hover;
+			background-color: @btn-default-background-color-hover;
+		}
+	}
+
+	&.btn-primary {
+		transition: background-color linear 500ms, border linear 500ms;
+		color: #ffffff;
+		background-color: #282828;
+		border-color: #282828;
+
+		&:active,
+		&:focus,
+		&:hover {
+			color: #ffffff;
+			background-color: #000000;
+			border-color: #000000;
+		}
+	}
+}
+
+.ps {
+	& .ps__scrollbar-y-rail {
+		opacity: 0.6;
+
+		& .ps__scrollbar-y {
+			width: 11px;
+		}
+	}
+}
+
+.perfect-scrollbar {
+	margin: 100px 60px;
+	position: relative;
+	height: 340px;
+	overflow: auto;
+}
+
+.fotorama__nav-wrap {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+}
+
+.fotorama__nav__frame {
+	& .fotorama__dot {
+		width: 16px;
+		height: 16px;
+		background-color: #ffffff;
+		border-width: 1px;
+		border-color: #000000;
+		border-radius: 50%;
+	}
+	&.fotorama__active {
+		& .fotorama__dot {
+			width: 16px;
+			height: 16px;
+			background-color: #000000;
+			border-width: 1px;
+			border-color: #ffffff;
+			border-radius: 50%;
+		}
+	}
+}
+
+.fotorama__stage {
+	&.fotorama__pointer {
+		min-width: 100%;
+		width: 100% !important;
+	}
+}
+
+.fotorama__nav {
+	&.fotorama__nav--dots {
+		min-width: 100%;
+		width: 100% !important;
+		left: 0;
+		right: 0;
+	}
+}
+
+.fotorama__stage__shaft {
+	min-width: 100%;
+	width: 100% !important;
+}
+
+.fotorama__img {
+	left: 0 !important;
+}
+
+.position-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+.img-border {
+	border: 1px solid #ffffff;
+}
+
+.xs-menu-container {
+	overflow: hidden;
+	padding-top: 2px;
+	position: relative;
+	z-index: 5;
+
+	& label {
+		line-height: 1;
+	}
+
+	& nav {
+		background-color: @header-background-color;
+		border-top: 1px solid @first-nav-border-color;
+		border-bottom: 1px solid @first-nav-border-color;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		margin: 0 -10%;
+
+		& a {
+			display: block;
+		}
+	}
+
+	& .checked-menu + label {
+		margin-bottom: 0;
+	}
+	& .menu-button {
+		font-size: 25px;
+		display: inline-block;
+		margin-top: 3px;
+	}
+}
+
+.pp-video {
+	background: url(../images/bg-video.jpg) no-repeat center center;
+	height: 450px;
+	position: relative;
+	border-bottom: 1px solid @first-nav-border-color;
+
+	& .pp-video-title {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		font-size: 50px;
+		text-align: center;
+		margin: auto;
+		color: #ffffff;
+		line-height: 1;
+		z-index: 3;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	& .pp-video-bg-front {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.77);
+		z-index: 2;
+	}
+}
+
+.show-short,
+.show-all {
+	margin-top: 20px;
+	display: block;
+	color: #8a8888;
+	cursor: pointer;
+	text-decoration: underline;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: #8a8888;
+		text-decoration: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 100%;
+	}
+
+	.pp-video {
+		& .pp-video-title {
+			font-size: 60px;
+		}
+	}
+
+	.xs-menu-container {
+		& nav {
+			background-color: transparent;
+			border-top: none;
+			border-bottom: none;
+			padding-top: 0;
+			padding-bottom: 0;
+			margin: 0;
+
+			& a {
+				display: inline-block;
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: 100%;
+	}
+
+	.pp-video {
+		& .pp-video-title {
+			font-size: 90px;
+		}
+	}
+
+	.btn-lg {
+		font-size: 50px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}

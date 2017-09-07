@@ -1,0 +1,6 @@
+RewriteEngine on
+
+AddDefaultCharset utf-8
+#RewriteCond %{REQUEST_FILENAME} !.json
+
+RewriteRule ^favicon.ico$ favicon.ico [L]
