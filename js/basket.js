@@ -18,6 +18,7 @@
 		$(selectors.basketItem).each(function(){
 			completeItem($(this));
 		});
+		completeAllPrice();
 	};
 
 	var completeItem = function($item) {
@@ -47,6 +48,18 @@
 		}
 	};
 
+
+	var completeAllPrice = function(){
+		var priceSum = 0;
+		$(selectors.basketItem).each(function(){
+			var $this = $(this);
+			var itemAmount = parseInt($this.attr('data-item-amount')) || 0;
+			var itemUnitPrice = parseInt($this.attr('data-item-unit-price')) || 0;
+			priceSum += (itemAmount * itemUnitPrice)
+		});
+		$(selectors.basketAllItemsPrice).find('span').text(priceSum);
+	};
+
 	$(function(){
 		renderBasketItems();
 	});
@@ -63,6 +76,7 @@
 		}
 		$basketItem.attr('data-item-amount', newItemAmount);
 		completeItem($basketItem);
+		completeAllPrice();
 		e.preventDefault();
 		e.stopPropagation();
 		return false;
@@ -75,6 +89,7 @@
 		var itemAmount = parseInt($basketItem.attr('data-item-amount')) || 0;
 		$basketItem.attr('data-item-amount', itemAmount + itemStep);
 		completeItem($basketItem);
+		completeAllPrice();
 		e.preventDefault();
 		e.stopPropagation();
 		return false;
