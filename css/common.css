@@ -1166,6 +1166,11 @@ header {
     right: 0;
   }
 }
+@media (min-width: 1200px) {
+  .pp-product.active .pp-product-menu {
+    width: 25%;
+  }
+}
 .beer {
   background-color: #ffffff;
   color: #000000;
