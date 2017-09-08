@@ -1043,12 +1043,12 @@ header {
 .pp-top-menu .pp-menu-item.active p {
   color: #000000;
 }
-.pp-top-menu .pp-menu-item.active svg .description-big0,
-.pp-top-menu .pp-menu-item.active svg .camera-big0 {
+.pp-top-menu .pp-menu-item.active svg .description-small0,
+.pp-top-menu .pp-menu-item.active svg .camera-small0 {
   stroke: #000000 !important;
 }
-.pp-top-menu .pp-menu-item.active svg .description-big1,
-.pp-top-menu .pp-menu-item.active svg .camera-big1 {
+.pp-top-menu .pp-menu-item.active svg .description-small1,
+.pp-top-menu .pp-menu-item.active svg .camera-small1 {
   fill: #000000 !important;
 }
 .pp-product.active .pp-product-menu__container {
