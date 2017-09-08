@@ -796,6 +796,10 @@ header {
   transition: padding ease 700ms, width 1200ms ease 500ms, top linear 500ms;
   top: 540px;
 }
+.pp-product.active .pp-product-content .btn {
+  margin-left: 0;
+  width: 100%;
+}
 .pp-product.active .pp-product-price-block {
   transition: height ease 500ms;
   height: 200px;
@@ -837,7 +841,7 @@ header {
     background: rgba(0,0,0,0.5);
   }
   .pp-product.active .pp-product-description-container {
-    width: 50%;
+    width: 58.33333333%;
   }
 }
 @media (min-width: 1200px) {
@@ -1076,7 +1080,7 @@ header {
     right: 0;
   }
   .pp-product.active .pp-product-menu {
-    width: 25%;
+    width: 16.66666667%;
   }
   .pp-top-menu.active {
     margin-top: -85px;

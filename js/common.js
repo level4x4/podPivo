@@ -161,7 +161,7 @@
 		$product.addClass(classNames.active);
 		$this.closest(selectors.productMenuContainer).addClass(classNames.active);
 		$product.find('a').removeClass(classNames.active);
-		$this.addClass(classNames.active);
+		$product.find('a[data-open-block="' + thisOpenBlockName + '"]').addClass(classNames.active);
 		transitionEndsOnce($product.find(selectors.productDescriptionContainer), function(e) {
 			$product.find(selectors.perfectScrollbar).perfectScrollbar('update');
 			$product.find(selectors.fotorama).fotorama();

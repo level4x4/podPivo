@@ -35,14 +35,15 @@
 	var render = function() {
 		if ($smToggleMenu.exists()) {
 			var $this = $(this),
+				brakePosition = smTogglePositionOffset.top,
 				thisScrollTop = $this.scrollTop();
 
-			if (thisScrollTop >= (smTogglePositionOffset.top - 0) && $smToggleMenu.hasClass(classNames.positionStatic)) {
+			if (thisScrollTop >= brakePosition && $smToggleMenu.hasClass(classNames.positionStatic)) {
 				$smToggleMenu.fadeIn('fast', function () {
 					$(this).removeClass(classNames.positionStatic).addClass(classNames.positionFixed).fadeIn('fast');
 				});
 			}
-			if (thisScrollTop <= (smTogglePositionOffset.top - 0) && $smToggleMenu.hasClass(classNames.positionFixed)) {
+			if (thisScrollTop <= brakePosition && $smToggleMenu.hasClass(classNames.positionFixed)) {
 				$smToggleMenu.fadeIn('fast', function () {
 					$(this).removeClass(classNames.positionFixed).addClass(classNames.positionStatic).fadeIn('fast');
 				});
