@@ -409,6 +409,7 @@ header {
   display: inline-block;
   position: relative;
   line-height: 62px;
+  height: 62px;
   font-size: 25px;
   color: #b5b5b5;
   text-decoration: none;
@@ -517,6 +518,7 @@ header {
     height: 78px;
   }
   .pp-second-nav nav a {
+    height: 78px;
     line-height: 78px;
   }
   .pp-second-nav nav a p {
@@ -548,6 +550,7 @@ header {
     height: 109px;
   }
   .pp-second-nav nav a {
+    height: 109px;
     line-height: 109px;
   }
   .pp-second-nav nav a span {
