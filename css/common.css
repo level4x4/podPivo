@@ -264,48 +264,6 @@ h2 {
     width: 1170px;
   }
 }
-.position-relative {
-  position: relative;
-}
-.position-absolute {
-  position: absolute;
-}
-.xs-hide,
-.sm-hide,
-.md-hide,
-.lg-hide {
-  display: none;
-}
-.xs-show,
-.sm-show,
-.md-show,
-.lg-show {
-  display: block;
-}
-@media (min-width: 768px) {
-  .xs-hide {
-    display: block;
-  }
-  .xs-show {
-    display: none;
-  }
-}
-@media (min-width: 992px) {
-  .sm-hide {
-    display: block;
-  }
-  .sm-show {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
-  .md-hide {
-    display: block;
-  }
-  .md-show {
-    display: none;
-  }
-}
 .xs-menu-container .menu-button,
 .sm-menu-container .menu-button,
 .md-menu-container .menu-button,
@@ -1420,4 +1378,46 @@ footer .pp-socials a:active,
 footer .pp-socials a:focus,
 footer .pp-socials a:hover {
   color: #ffffff;
+}
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+.xs-hide,
+.sm-hide,
+.md-hide,
+.lg-hide {
+  display: none;
+}
+.xs-show,
+.sm-show,
+.md-show,
+.lg-show {
+  display: block;
+}
+@media (min-width: 768px) {
+  .xs-hide {
+    display: block;
+  }
+  .xs-show {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .sm-hide {
+    display: block;
+  }
+  .sm-show {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .md-hide {
+    display: block;
+  }
+  .md-show {
+    display: none;
+  }
 }
