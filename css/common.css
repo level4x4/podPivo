@@ -837,7 +837,7 @@ header {
     background: rgba(0,0,0,0.5);
   }
   .pp-product.active .pp-product-description-container {
-    width: 58.33333333%;
+    width: 50%;
   }
 }
 @media (min-width: 1200px) {
