@@ -63,7 +63,7 @@ h2 {
   text-decoration: none;
 }
 .btn.btn-lg {
-  font-size: 40px;
+  font-size: 35px;
   line-height: 63px;
   height: 77px;
 }
@@ -255,7 +255,7 @@ h2 {
   .pp-video .pp-video-title {
     font-size: 90px;
   }
-  .btn-lg {
+  .btn.btn-lg {
     font-size: 50px;
   }
 }
