@@ -377,7 +377,8 @@ header {
   left: 0;
   right: 0;
   height: 10px;
-  background: repeating-linear-gradient(-45deg,#000000 0px,#000000 6px,#ffffff 1px,#ffffff 7px);
+  width: 100%;
+  background: url(../images/separator-white-small.png) repeat-x top center;
 }
 .pp-logo svg {
   margin: auto;
@@ -1146,7 +1147,7 @@ header {
   left: 0;
   right: 0;
   height: 32px;
-  background: repeating-linear-gradient(-45deg,transparent 0px,transparent 6px,#000000 1px,#000000 7px);
+  background: url(../images/separator-black-big.png) repeat-x top center;
 }
 .beer a {
   text-decoration: underline;
@@ -1363,7 +1364,7 @@ footer:after {
   left: 0;
   right: 0;
   height: 32px;
-  background: repeating-linear-gradient(-45deg,transparent 0px,transparent 6px,#ffffff 1px,#ffffff 7px);
+  background: url(../images/separator-white-big.png) repeat-x top center;
 }
 footer a {
   text-decoration: underline;
@@ -1392,12 +1393,6 @@ footer .pp-socials a:hover {
 .sm-hide,
 .md-hide,
 .lg-hide {
-  display: none;
-}
-.xs-hide.pp-logo,
-.sm-hide.pp-logo,
-.md-hide.pp-logo,
-.lg-hide.pp-logo {
   display: none;
 }
 .xs-show,
