@@ -186,6 +186,11 @@ h2 {
   height: 450px;
   position: relative;
   border-bottom: 1px solid #ffffff;
+  overflow: hidden;
+}
+.pp-video video {
+  width: 100%;
+  margin-top: -15%;
 }
 .pp-video .pp-video-title {
   position: absolute;
@@ -1253,6 +1258,9 @@ section {
 .about-us h3 {
   font-size: 30px;
 }
+.delivery .img-circle {
+  margin-bottom: 20px;
+}
 .white-section {
   background-color: #ffffff;
   color: #000000;
@@ -1269,6 +1277,12 @@ section {
 }
 .pp-basket-item {
   position: relative;
+  margin-top: 10px;
+  transition: opacity linear 500ms, width 1000ms linear 500ms;
+}
+.pp-basket-item.pp-basket-item-hide {
+  opacity: 0;
+  width: 0;
 }
 .pp-basket-item h2 {
   font-size: 22px;
@@ -1336,6 +1350,35 @@ section {
 }
 .pp-basket-item .pp-basket-item-delete {
   position: absolute;
+}
+.pp-basket-item-delete {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-right: 25%;
+  margin-left: auto;
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+.pp-basket-item-delete:before,
+.pp-basket-item-delete:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 16px;
+  top: -3px;
+  left: 5px;
+  background-color: #000000;
+}
+.pp-basket-item-delete:before {
+  transform: rotate(45deg);
+}
+.pp-basket-item-delete:after {
+  transform: rotate(-45deg);
 }
 .pp-to-pay {
   font-size: 25px;

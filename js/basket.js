@@ -1,11 +1,14 @@
 (function(){
 	var classNames = {
 		basketItem: 'pp-basket-item',
+		basketItemHide: 'pp-basket-item-hide',
 		basketItemAmount: 'pp-basket-item-amount',
 		basketItemAmountRemove: 'pp-basket-item-amount-remove',
 		basketItemAmountAdd: 'pp-basket-item-amount-add',
 		basketItemPrice: 'pp-basket-item-price',
 		basketAllItemsPrice: 'pp-basket-all-items-price',
+
+		basketItemDelete: 'pp-basket-item-delete',
 
 		active: 'active'
 	};
@@ -90,6 +93,19 @@
 		$basketItem.attr('data-item-amount', itemAmount + itemStep);
 		completeItem($basketItem);
 		completeAllPrice();
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
+	});
+
+	$(document).on('click', selectors.basketItemDelete, function(e){
+		var $this = $(this);
+		var $basketItem = $this.closest(selectors.basketItem);
+		$basketItem.addClass(classNames.basketItemHide);
+		$basketItem.one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function(e) {
+			$basketItem.remove();
+			renderBasketItems();
+		});
 		e.preventDefault();
 		e.stopPropagation();
 		return false;
