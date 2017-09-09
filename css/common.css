@@ -1394,6 +1394,12 @@ footer .pp-socials a:hover {
 .lg-hide {
   display: none;
 }
+.xs-hide.pp-logo,
+.sm-hide.pp-logo,
+.md-hide.pp-logo,
+.lg-hide.pp-logo {
+  display: none;
+}
 .xs-show,
 .sm-show,
 .md-show,
@@ -1403,6 +1409,9 @@ footer .pp-socials a:hover {
 @media (min-width: 768px) {
   .xs-hide {
     display: block;
+  }
+  .xs-hide.pp-logo {
+    display: flex;
   }
   .xs-show {
     display: none;
