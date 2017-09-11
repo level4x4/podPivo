@@ -1391,6 +1391,17 @@ section {
 .pp-basket-all-items-price small {
   font-size: 35px;
 }
+.pp-basket-message {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 500px;
+  background-color: #ffffff;
+}
+.pp-basket-message .pp-basket-text-info {
+  font-size: 50px;
+  color: #000000;
+}
 footer {
   color: #ffffff;
   font-size: 30px;

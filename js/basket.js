@@ -10,6 +10,10 @@
 
 		basketItemDelete: 'pp-basket-item-delete',
 
+		basketMessage: 'pp-basket-message',
+		textCenter: 'text-center',
+		basketTextInfo: 'pp-basket-text-info',
+
 		active: 'active'
 	};
 
@@ -54,7 +58,16 @@
 
 	var completeAllPrice = function(){
 		var priceSum = 0;
-		$(selectors.basketItem).each(function(){
+		var $basketItem = $(selectors.basketItem);
+		if (!$basketItem.exists()) {
+			$('main').html(
+				$('<section/>', {class: [classNames.basketMessage, classNames.textCenter].join(' ')}).html(
+					$('<p/>', {class: classNames.basketTextInfo, text: 'Корзина пуста'})
+				)
+			);
+			return;
+		}
+		$basketItem.each(function(){
 			var $this = $(this);
 			var itemAmount = parseInt($this.attr('data-item-amount')) || 0;
 			var itemUnitPrice = parseInt($this.attr('data-item-unit-price')) || 0;
