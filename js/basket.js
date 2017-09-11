@@ -3,10 +3,12 @@
 		basketItem: 'pp-basket-item',
 		basketItemHide: 'pp-basket-item-hide',
 		basketItemAmount: 'pp-basket-item-amount',
+		basketInputAmount: 'pp-basket-input-amount',
 		basketItemAmountRemove: 'pp-basket-item-amount-remove',
 		basketItemAmountAdd: 'pp-basket-item-amount-add',
 		basketItemPrice: 'pp-basket-item-price',
 		basketAllItemsPrice: 'pp-basket-all-items-price',
+		basketAllInputPrice: 'pp-basket-all-input-price',
 
 		basketItemDelete: 'pp-basket-item-delete',
 
@@ -38,7 +40,9 @@
 		var $basketItemAmountRemove = $item.find(selectors.basketItemAmountRemove);
 		var $basketItemAmountAdd = $item.find(selectors.basketItemAmountAdd);
 		var $basketItemPrice = $item.find(selectors.basketItemPrice);
+		var $basketInputAmount = $item.find(selectors.basketInputAmount);
 
+		$basketInputAmount.val(itemAmount);
 		$basketItemAmount.text(itemAmount + ' ' + itemUnit);
 		$basketItemPrice.find('span').text(itemAmount * itemUnitPrice);
 
@@ -74,6 +78,7 @@
 			priceSum += (itemAmount * itemUnitPrice)
 		});
 		$(selectors.basketAllItemsPrice).find('span').text(priceSum);
+		$(selectors.basketAllInputPrice).val(priceSum);
 	};
 
 	$(function(){
