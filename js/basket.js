@@ -16,7 +16,8 @@
 		textCenter: 'text-center',
 		basketTextInfo: 'pp-basket-text-info',
 
-		active: 'active'
+		active: 'active',
+		modal: 'modal'
 	};
 
 	var ids = {};
@@ -119,13 +120,36 @@
 	$(document).on('click', selectors.basketItemDelete, function(e){
 		var $this = $(this);
 		var $basketItem = $this.closest(selectors.basketItem);
-		$basketItem.addClass(classNames.basketItemHide);
-		$basketItem.one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function(e) {
-			$basketItem.remove();
-			renderBasketItems();
+		pp.showModalDialog({
+			modalTitle: 'Удаление товара',
+			modalBody: 'Вы действительно хотите удалить ' + $basketItem.find('h2').text() + '?',
+			modalFooter: [
+				{
+					btnName: 'Да',
+					btnFunction: function () {
+						$basketItem.addClass(classNames.basketItemHide);
+						$basketItem.one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function(e) {
+							$basketItem.remove();
+							renderBasketItems();
+						});
+						$(selectors.modal).modal('hide');
+					},
+					btnClass: 'btn btn-primary'
+				},
+				{
+					btnName: 'Нет',
+					btnFunction: function () {
+						$(selectors.modal).modal('hide');
+					},
+					btnClass: 'btn btn-primary'
+				}
+			]
 		});
+
 		e.preventDefault();
 		e.stopPropagation();
 		return false;
 	});
+
+	$()
 })();

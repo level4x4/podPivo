@@ -75,7 +75,12 @@
 		showShort: 'show-short',
 
 		active: 'active',
-		hide: 'hide'
+		hide: 'hide',
+
+		modal: 'modal',
+		modalTitle: 'modal-title',
+		modalBody: 'modal-body',
+		modalFooter: 'modal-footer'
 	};
 
 	var ids = {};
@@ -95,6 +100,26 @@
 			buildSelectors(selectors, ids, "#");
 		}
 		return selectors;
+	};
+
+	pp.showModalDialog = function(parametrs) {
+		var $modal = $(selectors.modal);
+		var modalFooter = parametrs.modalFooter;
+		$modal.find(selectors.modalTitle).text(parametrs.modalTitle || '');
+		$modal.find(selectors.modalBody).html(parametrs.modalBody || '');
+
+		if (!_.isEmpty(modalFooter)) {
+			$modal.find(selectors.modalFooter).html('');
+			for (var modalFooterIndex in modalFooter) {
+				var btn = modalFooter[modalFooterIndex];
+				var $btn = $('<button/>', {class: btn.btnClass, text: btn.btnName});
+				$btn.on('click', btn.btnFunction);
+				$modal.find(selectors.modalFooter).append($btn);
+			}
+
+		}
+
+		$modal.modal('show');
 	};
 
 	var selectors = pp.buildSelectors(classNames, ids);
