@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Корзина - Под пиво</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes"/>
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="-1">
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+	<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+	<link href="css/perfect-scrollbar.min.css" type="text/css" rel="stylesheet"/>
+	<link href="library/fotorama/fotorama.css" type="text/css" rel="stylesheet"/>
+	<link href="css/common.css" type="text/css" rel="stylesheet"/>
+	<link href="less/index.less" type="text/css" rel="stylesheet/less"/>
+
+	<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+<header>
+	<div class="pp-first-nav">
+		<div class="container">
+			<div class="row position-relative">
+				<div class="col-sm-3 col xs-hide phone">097 100 5555</div>
+				<div class="col-xs-12 col-sm-6 col xs-menu-container">
+					<input type="checkbox" class="checked-menu" id="checkedMenu">
+					<label for="checkedMenu">
+						<span class="menu-button">
+							<i class="fa fa-bars"></i>
+							<i class="fa fa-times"></i>
+						</span>
+					</label>
+					<nav class="text-center effect-nav">
+						<a href="#">О нас</a>
+						<a href="#">Контакты</a>
+						<a href="#">Доставка</a>
+					</nav>
+				</div>
+				<div class="xs-show text-center pp-logo-small">
+					<img class="media-object smart-icon-set-color smart-icon-svg" src="images/svg/logo-small.svg" data-replace-color="ffffff" width="170" height="26" alt="" title=""/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pp-logo text-center xs-hide">
+		<img class="media-object smart-icon-set-color smart-icon-svg" src="images/svg/logo.svg" data-replace-color="ffffff" width="217" height="111" alt="" title=""/>
+	</div>
+</header>
+<main>
+	<section class="white-section pp-basket-container">
+		<div class="container">
+			<div class="row">
+				<h1 class="col-xs-12 text-center">Оформление заказа</h1>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-md-4 col-border">
+					<h3>Като ты такой?</h3>
+					<div class="form-group has-error">
+						<input type="text" name="name" class="form-control" placeholder="Имя">
+					</div>
+					<div class="form-group">
+						<input type="text" name="email" class="form-control" placeholder="E-mail">
+					</div>
+					<div class="form-group">
+						<input type="text" name="phone" class="form-control" placeholder="Телефон">
+					</div>
+					<div class="form-group has-error">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+								<span>Не перезванивать мне</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-border">
+					<h3><a class="back-to-select-delivery hide"><img src="images/back.png" width="35" height="10" alt="" title=""></a>Доставка</h3>
+					<div class="form-group">
+						<div class="radio">
+							<label>
+								<input type="radio" name="optionsRadios" value="1">
+								<p class="clearfix">Самовывоз Киев\Днепр <span class="pull-right">0 грн</span></p>
+							</label>
+						</div>
+					</div>
+					<div class="form-group has-error">
+						<div class="radio">
+							<label>
+								<input type="radio" name="optionsRadios" value="2">
+								<p class="clearfix">Курьер по Украине <span class="pull-right">50 грн</span></p>
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="radio">
+							<label>
+								<input type="radio" name="optionsRadios" value="3">
+								<p class="clearfix">Нова Пошта <span class="pull-right">40 грн</span></p>
+							</label>
+						</div>
+					</div>
+					<div class="select form-group has-error">
+						<select class="form-control">
+							<option>Город</option>
+						</select>
+					</div>
+					<div class="select form-group">
+						<select class="form-control">
+							<option>Склад</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-4 col-border">
+					<h3>Уточнение заказа</h3>
+					<div class="form-group">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+								<span>Без специй</span>
+							</label>
+						</div>
+					</div>
+					<div class="form-group has-error">
+						<textarea rows="4" placeholder="Коментарий к заказу"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="row border-top">
+				<div class="col-md-4 col-sm-6">
+					<div class="pp-to-pay">Оплата:</div>
+					<div class="form-group">
+						<div class="radio">
+							<label>
+								<input type="radio" name="optionsRadios" value="1">
+								<span>Онлайн WayforPay</span>
+							</label>
+						</div>
+					</div>
+					<div class="form-group has-error">
+						<div class="radio">
+							<label>
+								<input type="radio" name="optionsRadios" value="2">
+								<span>Оплата при получении</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="pp-to-pay">К оплате:</div>
+					<input type="hidden" value="" class="pp-basket-all-input-price" name="basketAllInputPrice">
+					<p class="pp-basket-all-items-price">1600<span></span>
+						<small>грн.</small>
+					</p>
+				</div>
+				<div class="col-md-3 col-sm-12 text-center">
+					<a class="btn btn-primary">Заказать</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<footer>
+	<section class="contacts">
+		<div class="container">
+			<div class="row text-center">
+				<h2>Контакты</h2>
+				<p>г, Днепр первый Подливной проспект, д. 123. Подвал</p>
+				<p><a href="#">zakaz@podpivo.com.ua</a></p>
+				<p>097 100 55 55</p>
+				<p class="pp-socials">
+					<a target="_blank" href="#"><i class="fa fa-facebook-f"></i></a>
+					<a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+					<a target="_blank" href="#"><i class="fa fa-instagram"></i></a>
+					<a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+					<a target="_blank" href="#"><i class="fa fa-youtube-play"></i></a>
+				</p>
+			</div>
+		</div>
+	</section>
+</footer>
+
+<div class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<p>One fine body&hellip;</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Да</button>
+				<button type="button" class="btn btn-primary">Нет</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script src="js/underscore-min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/device.min.js" type="text/javascript"></script>
+<script src="js/parallax.min.js" type="text/javascript"></script>
+<script src="js/jquery.scrollify.min.js" type="text/javascript"></script>
+<script src="js/image.to.svg.js" type="text/javascript"></script>
+<script src="js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+<script src="library/fotorama/fotorama.js" type="text/javascript"></script>
+<script src="library/jquery.dotdotdot.js" type="text/javascript"></script>
+<script src="js/scroll-toggle-menu.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/basket-steps.js" type="text/javascript"></script>
+</body>
+</html>

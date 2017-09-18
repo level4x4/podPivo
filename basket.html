@@ -51,9 +51,8 @@
 			<div class="row">
 				<h1 class="col-xs-12 text-center">Оформление заказа</h1>
 			</div>
-			<hr>
-			<div class="row">
-				<form action="" method="post">
+			<div class="row border-top">
+				<form id="basketForm" action="basket-step-1.html" method="post">
 					<div class="col-sm-4 col-md-3 text-center pp-basket-item" data-item-min="100" data-item-step="50" data-item-max="1000" data-item-unit="г." data-item-amount="100" data-item-unit-price="2">
 						<img src="images/delivery.jpg" width="100" height="100" alt="" title="" class="img-circle img-border img-responsive center-block">
 						<h2>Jerky из свинины</h2>
@@ -121,15 +120,14 @@
 					</div>
 				</form>
 			</div>
-			<hr>
-			<div class="row">
+			<div class="row border-top">
 				<div class="col-md-offset-3 col-md-3">
 					<div class="pp-to-pay">К оплате:</div>
 					<input type="hidden" value="" class="pp-basket-all-input-price" name="basketAllInputPrice">
 					<p class="pp-basket-all-items-price"><span></span> <small>грн.</small></p>
 				</div>
 				<div class="col-md-3 text-center">
-					<a class="btn btn-primary">Заказать</a>
+					<button form="basketForm" type="submit" class="btn btn-primary">Заказать</button>
 				</div>
 			</div>
 		</div>
