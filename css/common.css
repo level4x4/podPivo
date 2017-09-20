@@ -664,9 +664,6 @@ header {
   left: 0;
   right: 0;
 }
-.pp-product .pp-product-description-container__item img {
-  margin-left: -25%;
-}
 .pp-product .pp-product-description-container__item .pp-image-bg {
   position: absolute;
   top: 0;
@@ -800,9 +797,6 @@ header {
   }
   .pp-product h2 {
     font-size: 90px;
-  }
-  .pp-product .pp-product-description-container__item img {
-    margin-left: -50%;
   }
   .pp-product.active .pp-product-content {
     top: 0;
