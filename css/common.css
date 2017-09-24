@@ -1307,6 +1307,10 @@ section {
 .pp-basket-container .col-border .form-group {
   margin-bottom: 20px;
 }
+.pp-basket-container .radio label,
+.pp-basket-container .checkbox label {
+  padding-left: 25px;
+}
 .pp-basket-container .radio label > span,
 .pp-basket-container .radio label > p,
 .pp-basket-container .checkbox label > span,
@@ -1323,12 +1327,15 @@ section {
   height: 20px;
   background-repeat: no-repeat;
   position: absolute;
-  top: 0;
+  top: -2px;
   left: -25px;
 }
 .pp-basket-container .radio label > span:before,
 .pp-basket-container .radio label > p:before {
   background-image: url(../images/radio.png);
+}
+.pp-basket-container .radio label > p:before {
+  top: 2px;
 }
 .pp-basket-container .checkbox label > span:before,
 .pp-basket-container .checkbox label > p:before {
