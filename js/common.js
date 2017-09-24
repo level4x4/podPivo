@@ -73,6 +73,7 @@
 		dotdotdot: 'dotdotdot',
 		showAll: 'show-all',
 		showShort: 'show-short',
+		noFilter: 'no-filter',
 
 		active: 'active',
 		hide: 'hide',
@@ -228,6 +229,9 @@
 	
 	$(document).on('click', selectors.filters + ' a', function(e) {
 		var $this = $(this);
+		if ($this.hasClass(classNames.noFilter)) {
+			return;
+		}
 		var filterName = $this.attr('data-filter');
 		var $product = $(selectors.product);
 		$(selectors.filters).find('a').removeClass(classNames.active);

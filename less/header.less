@@ -160,6 +160,10 @@ header {
 				}
 			}
 		}
+
+		.pp-mobile-basket {
+			background-color: #ffffff;
+		}
 	}
 
 	& .pp-basket {
@@ -198,8 +202,8 @@ header {
 	z-index: 10;
 	background: @second-nav-background-color;
 	top: 0;
-	left: -25%;
-	right: -25%;
+	left: 0;
+	right: 0;
 	height: 62px;
 }
 
@@ -250,6 +254,10 @@ header {
 						height: 78px;
 					}
 				}
+
+				&.sm-hide {
+					display: none;
+				}
 			}
 		}
 	}
@@ -270,6 +278,8 @@ header {
 	}
 
 	.pp-nav-basket-container-in-filter-menu {
+		left: -7%;
+		right: -7%;
 		height: 109px;
 	}
 

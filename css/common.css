@@ -478,6 +478,9 @@ header {
   opacity: 1;
   color: #484747;
 }
+.pp-second-nav nav .pp-mobile-basket {
+  background-color: #ffffff;
+}
 .pp-second-nav .pp-basket {
   padding-top: 21px;
   transition: bottom ease 500ms;
@@ -505,8 +508,8 @@ header {
   z-index: 10;
   background: #191919;
   top: 0;
-  left: -25%;
-  right: -25%;
+  left: 0;
+  right: 0;
   height: 62px;
 }
 @media (min-width: 768px) {
@@ -549,6 +552,9 @@ header {
   .pp-second-nav nav a.active:before {
     height: 78px;
   }
+  .pp-second-nav nav a.sm-hide {
+    display: none;
+  }
 }
 @media (min-width: 1200px) {
   .sm-toggle-menu {
@@ -562,6 +568,8 @@ header {
     height: 111px;
   }
   .pp-nav-basket-container-in-filter-menu {
+    left: -7%;
+    right: -7%;
     height: 109px;
   }
   .pp-second-nav {
