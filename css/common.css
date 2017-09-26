@@ -1726,11 +1726,11 @@ footer .pp-socials a:hover {
 .sm-show,
 .md-show,
 .lg-show {
-  display: block;
+  display: initial;
 }
 @media (min-width: 768px) {
   .xs-hide {
-    display: block;
+    display: initial;
   }
   .xs-hide.pp-logo {
     display: flex;
@@ -1741,7 +1741,7 @@ footer .pp-socials a:hover {
 }
 @media (min-width: 992px) {
   .sm-hide {
-    display: block;
+    display: initial;
   }
   .sm-show {
     display: none;
@@ -1749,7 +1749,7 @@ footer .pp-socials a:hover {
 }
 @media (min-width: 1200px) {
   .md-hide {
-    display: block;
+    display: initial;
   }
   .md-show {
     display: none;
