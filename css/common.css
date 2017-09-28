@@ -513,6 +513,10 @@ header {
 .pp-second-nav .position-fixed .pp-basket:focus {
   bottom: -65px;
 }
+.pp-second-nav .container {
+  padding-right: 0;
+  padding-left: 0;
+}
 .pp-logo-small {
   padding-top: 2px;
   position: absolute;
@@ -589,6 +593,10 @@ header {
   .pp-second-nav .pp-basket:before,
   .pp-second-nav .pp-basket:after {
     display: block;
+  }
+  .pp-second-nav .container {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 @media (min-width: 1200px) {

@@ -117,7 +117,6 @@
 				$btn.on('click', btn.btnFunction);
 				$modal.find(selectors.modalFooter).append($btn);
 			}
-
 		}
 
 		$modal.modal('show');
