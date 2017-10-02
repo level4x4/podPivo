@@ -257,6 +257,7 @@ h2 {
   box-shadow: none;
   -webkit-box-shadow: none;
   font-family: "Minion-Pro";
+  font-size: 20px;
 }
 .select2-drop {
   box-shadow: none;
