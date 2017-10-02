@@ -263,6 +263,10 @@ h2 {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
+.select2-drop-active {
+  border-color: #000000;
+  border-radius: 0;
+}
 @media (min-width: 768px) {
   .container {
     width: 100%;
