@@ -246,7 +246,9 @@ h2 {
 .select2-container .select2-choice div {
   display: none;
 }
-.select2-container.form-control {
+.select2-container .select2-choices .select2-search-field input,
+.select2-container .select2-choice,
+.select2-container .select2-choices {
   border-radius: 0;
   border-top: none;
   border-left: none;
