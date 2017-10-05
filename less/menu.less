@@ -34,6 +34,11 @@
 
 	& .checked-menu:checked ~ nav {
 		display: block;
+		position: fixed;
+		top: 33px;
+		left: 10%;
+		right: 0;
+		width: 100%;
 	}
 }
 
@@ -49,6 +54,18 @@
 	}
 }
 @media (min-width: 992px) {
+	.xs-menu-container,
+	.sm-menu-container,
+	.md-menu-container {
+		& .checked-menu:checked ~ nav {
+			position: relative;
+			width: auto;
+			top: auto;
+			left: auto;
+			right: auto;
+		}
+	}
+
 	.sm-menu-container {
 		& nav {
 			display: block;
