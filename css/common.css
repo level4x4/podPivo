@@ -787,7 +787,7 @@ header {
   color: #000000;
 }
 .pp-product .pp-product-description-container-close {
-  z-index: 9;
+  z-index: 3;
   display: block;
   width: 0;
   height: 0;
