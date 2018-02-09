@@ -446,6 +446,7 @@ header {
   height: 63px;
   background-color: #191919;
   border-bottom: 1px solid #ffffff;
+  z-index: 1;
 }
 .pp-second-nav .container {
   background-color: #191919;
