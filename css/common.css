@@ -343,11 +343,7 @@ h2 {
 .md-menu-container .checked-menu:checked ~ nav,
 .lg-menu-container .checked-menu:checked ~ nav {
   display: block;
-  position: fixed;
-  top: 33px;
-  left: 10%;
-  right: 0;
-  width: 100%;
+  margin-top: -3px;
 }
 @media (min-width: 768px) {
   .xs-menu-container nav {
